@@ -7,7 +7,7 @@ body, html {
 	height: 100%;
 	width: 100%;
 
-	background: #d0fef2;
+	background: #d1ffff;
 }
 
 #wrapper {
@@ -27,7 +27,7 @@ header#banner {
 	text-align: center;
 	color: transparent;
 
-	background: green;
+	background: #9aeaea;
 }
 
 #content > h2 {
