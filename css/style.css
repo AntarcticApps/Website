@@ -73,12 +73,16 @@ article footer ul {
 	display: block;
 
 	list-style: none;
+
+	font-size: 0;
 }
 
 article footer li {
 	display: inline-block;
 
 	padding: 0 5px;
+
+	font-size: 15px;
 
 	border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
