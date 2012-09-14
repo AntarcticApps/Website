@@ -3,6 +3,13 @@
 	padding: 0;
 }
 
+body, html {
+	height: 100%;
+	width: 100%;
+
+	background: #d0fef2;
+}
+
 #wrapper {
 	font-family: "Helvetica", sans-serif;
 }
