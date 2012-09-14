@@ -7,10 +7,6 @@ body, html {
 	height: 100%;
 	width: 100%;
 
-	background: #d1ffff;
-}
-
-#wrapper {
 	font-family: "Helvetica", sans-serif;
 }
 
@@ -22,12 +18,67 @@ body, html {
 }
 
 header#banner {
-	height: 300px;
+	position: relative;
 
 	text-align: center;
 	color: transparent;
+}
 
-	background: #9aeaea;
+header#banner h1 {
+	position: absolute;
+
+	height: 200px;
+	width: 200px;
+
+	top: 50%;
+	left: 50%;
+
+	margin: -100px -100px;
+}
+
+header#banner #sky {
+	height: 200px;
+	width: 100%;
+
+	background-color: #cbe4f3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#bbd7ed), to(#dbf1fa));
+	background-image: -webkit-linear-gradient(top, #bbd7ed, #dbf1fa);
+	background-image: linear-gradient(top, #bbd7ed, #dbf1fa);
+}
+
+header#banner #ice {
+	height: 4px;
+	width: 100%;
+
+	background: #ffffff;
+}
+
+header#banner #water {
+	height: 15px;
+	width: 100%;
+
+	background: #bbd8ed;
+}
+
+header#banner #edge {
+	height: 10px;
+	width: 100%;
+
+	background-color: #e6f0f3;
+	background-image: -webkit-gradient(linear, left center, right center, from(#edeced), to(#e0f4fa));
+	background-image: -webkit-linear-gradient(left, #edeced, #e0f4fa);
+	background-image: linear-gradient(left, #edeced, #e0f4fa);
+}
+
+#wrapper {
+	height: 100%;
+	width: 100%;
+
+	background-color: #e3f0f8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f9ff), to(#d6e8f2));
+	background-image: -webkit-linear-gradient(top, #f0f9ff, #d6e8f2);
+	background-image: -moz-linear-gradient(top, #f0f9ff, #d6e8f2);
+	background-image: linear-gradient(top, #f0f9ff, #d6e8f2);
 }
 
 #content > h2 {
@@ -35,8 +86,8 @@ header#banner {
 
 	font-size: 40px;
 
-	margin-top: 20px;
-	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 article header {
