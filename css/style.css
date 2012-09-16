@@ -199,7 +199,12 @@ article header {
 }
 
 article header h3 {
+	font-family: 'Passion One', sans-serif;
 	font-size: 35px;
+
+	color: #639AC7;
+
+	text-transform: uppercase;
 }
 
 article img {
