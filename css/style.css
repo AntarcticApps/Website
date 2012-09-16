@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,12 +9,19 @@ body, html {
 	height: 100%;
 	width: 100%;
 
-	font-family: "Helvetica", sans-serif;
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+
+	background-color: #e3f0f8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f9ff), to(#d6e8f2));
+	background-image: -webkit-linear-gradient(top, #f0f9ff, #d6e8f2);
+	background-image: -moz-linear-gradient(top, #f0f9ff, #d6e8f2);
+	background-image: linear-gradient(top, #f0f9ff, #d6e8f2);
 }
 
-#content {
-	height: 100%;
+.wrapper {
 	width: 500px;
+
+	position: relative;
 
 	margin: 0 auto;
 }
@@ -21,24 +30,35 @@ header#banner {
 	position: relative;
 
 	text-align: center;
-	color: transparent;
 }
 
 header#banner h1 {
 	position: absolute;
 
 	height: 200px;
-	width: 200px;
+	width: 100%;
 
 	top: 50%;
-	left: 50%;
+	left: 0;
 
-	margin: -100px -100px;
+	margin: -100px 0;
+
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 64px;
+	font-family: 'Futura', sans-serif;
+	text-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+	-webkit-user-select: none;
+
+	z-index: 5;
 }
 
 header#banner #sky {
-	height: 200px;
+	height: 250px;
 	width: 100%;
+
+	position: relative;
 
 	background-color: #cbe4f3;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#bbd7ed), to(#dbf1fa));
@@ -46,9 +66,46 @@ header#banner #sky {
 	background-image: linear-gradient(top, #bbd7ed, #dbf1fa);
 }
 
+header#banner .iceberg {
+	z-index: 5;
+}
+
+header#banner .iceberg1 {
+	background: url('../images/iceberg1.png') top left no-repeat;
+	width: 117px;
+	height: 84px;
+
+	position: absolute;
+	bottom: -5px;
+	left: 80%;
+}
+
+header#banner .iceberg2 {
+	background: url('../images/iceberg2.png') top left no-repeat;
+	width: 165px;
+	height: 60px;
+
+	position: absolute;
+	bottom: -5px;
+	left: -50px;
+}
+
 header#banner #ice {
-	height: 4px;
+	height: 5px;
 	width: 100%;
+
+	position: relative;
+}
+
+header#banner #ice .sheet {
+	height: 5px;
+	width: 100%;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	z-index: 6;
 
 	background: #ffffff;
 }
@@ -71,14 +128,11 @@ header#banner #edge {
 }
 
 #wrapper {
-	height: 100%;
 	width: 100%;
+}
 
-	background-color: #e3f0f8;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f9ff), to(#d6e8f2));
-	background-image: -webkit-linear-gradient(top, #f0f9ff, #d6e8f2);
-	background-image: -moz-linear-gradient(top, #f0f9ff, #d6e8f2);
-	background-image: linear-gradient(top, #f0f9ff, #d6e8f2);
+#content {
+	padding-top: 20px;
 }
 
 #content > h2 {
@@ -88,6 +142,61 @@ header#banner #edge {
 
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+@-webkit-keyframes skate {
+	0%, 100% {
+		left: 10%;
+		-webkit-transform: rotateY(0);
+	}
+	45% {
+		left: 90%;
+		-webkit-transform: rotateY(0);
+	}
+	50% {
+		left: 90%;
+		-webkit-transform: rotateY(180deg);
+	}
+	95% {
+		left: 10%;
+		-webkit-transform: rotateY(180deg);
+	}
+}
+
+@-webkit-keyframes waddle {
+	0%, 50%, 100% {
+		-webkit-transform: rotateZ(0);
+	}
+	25% {
+		-webkit-transform: rotateZ(1deg);
+	}
+	75% {
+		-webkit-transform: rotateZ(-1deg);
+	}
+}
+
+#ice .penguin {
+	position: absolute;
+	bottom: -1px;
+
+	z-index: 1;
+	
+	-webkit-animation: skate 60s infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.mr-t {
+	width: 15px;
+	height: 24px;
+}
+
+.mr-t i {
+	display: inline-block;
+	background: url('../images/mr_t.png') top left no-repeat;
+	width: 15px;
+	height: 24px;
+
+	-webkit-animation: waddle 0.4s infinite;
 }
 
 article header {
@@ -106,16 +215,19 @@ article img {
 	margin: 0 auto;
 	margin-bottom: 10px;
 
-	border-radius: 6px;
+	width: 488px;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 article p {
 	font-size: 15px;
-	line-height: 20px;
+	line-height: 25px;
 }
 
 article footer {
-	margin-top: 5px;
+	margin-top: 10px;
 
 	font-size: 15px;
 }
@@ -131,7 +243,7 @@ article footer ul {
 article footer li {
 	display: inline-block;
 
-	padding: 0 5px;
+	padding: 0 10px;
 
 	font-size: 15px;
 
@@ -161,10 +273,11 @@ article footer li a:hover {
 }
 
 #content > footer {
-	margin-top: 15px;
-	padding: 15px 0;
+	margin-top: 20px;
+	padding: 10px 0;
 
-	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 
+	text-align: center;
 	font-size: 15px;
 }
