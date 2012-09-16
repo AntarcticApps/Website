@@ -27,6 +27,37 @@ header#banner {
 	position: relative;
 
 	text-align: center;
+
+	background: #F0F9FF;
+}
+
+header#banner ul {
+	padding-top: 10px;
+	margin: 0 20px;
+
+	list-style: none;
+
+	z-index: 2;
+}
+
+header#banner ul li {
+	display: inline-block;
+
+	padding: 0 10px;
+
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: bold;
+
+	border-top: none;
+}
+
+header#banner ul li a {
+	color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+}
+
+header#banner ul li a:hover {
+	text-decoration: underline;
 }
 
 header#banner h1 {
@@ -126,7 +157,7 @@ header#banner #edge {
 
 #content {
 	margin: 0 auto;
-	padding: 20px 20px 0 20px;
+	padding: 10px 20px 0 20px;
 
 	background-color: #e3f0f8;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f9ff), to(#d6e8f2));
