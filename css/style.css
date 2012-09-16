@@ -164,14 +164,11 @@ header#banner #edge {
 }
 
 @-webkit-keyframes waddle {
-	0%, 50%, 100% {
-		-webkit-transform: rotateZ(0);
+	0%, 100% {
+		-webkit-transform: rotateZ(-2deg);
 	}
-	25% {
-		-webkit-transform: rotateZ(1deg);
-	}
-	75% {
-		-webkit-transform: rotateZ(-1deg);
+	50% {
+		-webkit-transform: rotateZ(2deg);
 	}
 }
 
@@ -183,6 +180,8 @@ header#banner #edge {
 	
 	-webkit-animation: skate 60s infinite;
 	-webkit-animation-timing-function: linear;
+
+	-webkit-transform-origin: center bottom;
 }
 
 .mr-t {
@@ -191,7 +190,7 @@ header#banner #edge {
 }
 
 .mr-t object {
-	-webkit-animation: waddle 0.4s infinite;
+	-webkit-animation: waddle 0.2s infinite;
 }
 
 article header {
