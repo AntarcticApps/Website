@@ -190,12 +190,7 @@ header#banner #edge {
 	height: 24px;
 }
 
-.mr-t i {
-	display: inline-block;
-	background: url('../images/mr_t.png') top left no-repeat;
-	width: 15px;
-	height: 24px;
-
+.mr-t object {
 	-webkit-animation: waddle 0.4s infinite;
 }
 
