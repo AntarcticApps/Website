@@ -87,6 +87,8 @@ header#banner h1 {
 	font-size: 64px;
 	font-family: 'Futura', sans-serif;
 	text-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+
+	-moz-user-select: none;
 	-webkit-user-select: none;
 
 	z-index: 5;
@@ -187,6 +189,34 @@ header#banner #edge {
 	padding-bottom: 20px;
 }
 
+@-moz-keyframes skate {
+	0%, 100% {
+		left: 10%;
+		-moz-transform: rotateY(0);
+	}
+	45% {
+		left: 90%;
+		-moz-transform: rotateY(0);
+	}
+	50% {
+		left: 90%;
+		-moz-transform: rotateY(180deg);
+	}
+	95% {
+		left: 10%;
+		-moz-transform: rotateY(180deg);
+	}
+}
+
+@-moz-keyframes waddle {
+	0%, 100% {
+		-moz-transform: rotateZ(-2deg);
+	}
+	50% {
+		-moz-transform: rotateZ(2deg);
+	}
+}
+
 @-webkit-keyframes skate {
 	0%, 100% {
 		left: 10%;
@@ -217,13 +247,16 @@ header#banner #edge {
 
 #ice .penguin {
 	position: absolute;
-	bottom: 0px;
+	bottom: 3px;
 
 	z-index: 1;
 	
+	-moz-animation: skate 60s infinite;
+	-moz-animation-timing-function: linear;
+	-moz-transform-origin: center bottom;
+
 	-webkit-animation: skate 60s infinite;
 	-webkit-animation-timing-function: linear;
-
 	-webkit-transform-origin: center bottom;
 }
 
@@ -233,6 +266,8 @@ header#banner #edge {
 }
 
 .mr-t object {
+	-moz-animation: waddle 0.2s infinite;
+
 	-webkit-animation: waddle 0.2s infinite;
 }
 
