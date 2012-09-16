@@ -126,10 +126,6 @@ header#banner #edge {
 	background-image: linear-gradient(left, #edeced, #e0f4fa);
 }
 
-#wrapper {
-	width: 100%;
-}
-
 #content {
 	padding-top: 20px;
 }
