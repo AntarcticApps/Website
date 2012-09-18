@@ -210,10 +210,10 @@ header#banner #edge {
 
 @-moz-keyframes waddle {
 	0%, 100% {
-		-moz-transform: rotateZ(-2deg);
+		-moz-transform: rotateX(-30deg) rotateZ(-1deg);
 	}
 	50% {
-		-moz-transform: rotateZ(2deg);
+		-moz-transform: rotateX(30deg) rotateZ(1deg);
 	}
 }
 
@@ -238,10 +238,10 @@ header#banner #edge {
 
 @-webkit-keyframes waddle {
 	0%, 100% {
-		-webkit-transform: rotateZ(-2deg);
+		-webkit-transform: rotateX(-30deg) rotateZ(-1deg);
 	}
 	50% {
-		-webkit-transform: rotateZ(2deg);
+		-webkit-transform: rotateX(30deg) rotateZ(1deg);
 	}
 }
 
@@ -266,9 +266,9 @@ header#banner #edge {
 }
 
 .mr-t object {
-	-moz-animation: waddle 0.2s infinite;
+	-moz-animation: waddle 0.4s infinite;
 
-	-webkit-animation: waddle 0.2s infinite;
+	-webkit-animation: waddle 0.4s infinite;
 }
 
 article header {
